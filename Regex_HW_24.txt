@@ -1,0 +1,9 @@
+[Java] Homework # 24 - regex
+
+TEXT:						REGEX:					MATCH:		
+01 They called him Smith, John 			[A-Z][a-z]+\,\s[A-Z][a-z]+		Smith, John
+02 They called him John Smith or Smith, John 	\w{4}\s\w{5}\s\w{2}.*			John Smith or Smith, John
+03 They called him John				.{4}$ or \w{4}$				John
+04 (415) 555-1212				\(.* or \(\d{3}\)\s\d{3}\-\d{4}		(415) 555-1212
+05 (415)-555-1212				\(\d{3}\)\-\d{3}\-\d{4} or \(.*		(415)-555-1212
+06 (415)-555-1212 and (415) 555-1212		\(\d{3}\).\d{3}.\d{4}			(415)-555-1212 and(excluded) (415) 555-1212	
