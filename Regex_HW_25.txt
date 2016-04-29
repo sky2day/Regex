@@ -1,0 +1,21 @@
+	text	regex
+1	94066-4126 or 94103	/(\d{5}-\d{4})|(\d{5})/x
+2	http://www.learn2test.net	/(https?):\/\/([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9}(:\d{1,4})?([-\w\/#~:.?+=&%@~]*)/x
+		
+	regex	comment
+1	/	# Beginning of regex
+2	(\d{5}	# 5 digits
+3	-	# Hyphen (must be escaped)
+4	\d{4})	# 4 digits
+5	|	# or
+6	(\d{5})	# 5 digits
+7	/	# Ending of regex
+8	x 	# Allow comments & white space
+		
+	regex	comment
+1	/	# Beginning of regex
+2	(https?) :	# http or https (here "s?" means "s" used 0 or 1 time)
+3	\/\/	# // (escaped)
+4	 ([0-9a-zA-Z]	# digits and letters (single)
+11	/	# Ending of regex
+12	x 	# Allow comments & white space
